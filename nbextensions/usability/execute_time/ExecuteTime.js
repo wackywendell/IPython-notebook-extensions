@@ -4,7 +4,7 @@
 //  Distributed under the terms of the BSD License.
 //----------------------------------------------------------------------------
 //
-// Execute timings - display when a cell has been executed lastly and how long it took
+// Execute timings - display when a cell has been executed last and how long it took
 // A double click on the box makes it disappear
 define(["require", "jquery", "base/js/namespace", "base/js/events"], function (require, $, IPython, events) {
     "use strict";
@@ -109,7 +109,7 @@ define(["require", "jquery", "base/js/namespace", "base/js/events"], function (r
                 firstExecTime=execTime;
             execCells.push([IPython.notebook.get_selected_index()]);
 
-            var startMsg = 'Lastly executed on ' + date_fmt(execTime);
+            var startMsg = 'Last executed ' + date_fmt(execTime);
 
             var timing_area=ce.find(".timing_area");
             if (timing_area.length === 0) {
